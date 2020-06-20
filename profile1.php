@@ -110,7 +110,7 @@ require_once('settings.php');
                         else echo '<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="img-fluid rounded-circle">'
                         ?>
                         <h4 class="card-title text-center mb20">
-                            <p>bonjour : <?php
+                            <p>Bonjour : <?php
 
                                             if (isset($_SESSION["users"])) {
                                                 echo $_SESSION["users"];
@@ -162,7 +162,7 @@ require_once('settings.php');
 
                     <!-- Group of default radios - option 2 -->
                     <div class="custom-control custom-radio">
-                        <input type="radio" value="2" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+                        <input type="radio" value="2" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios">
                         <label class="custom-control-label" for="defaultGroupExample2">Physique</label>
                     </div>
 
@@ -193,10 +193,8 @@ require_once('settings.php');
 
                     </div>
                 </div>
-                <!--/.Accordion wrapper-->
 
             </div>
-            <!-- Accordion card -->
 
 
         </div>

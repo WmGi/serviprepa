@@ -1,9 +1,13 @@
 <?php
 
-$radio_value = '2';
-if (isset($_POST['submit'])) {
 
-    $radio_value = $_POST["groupOfDefaultRadios"];
+if (isset($_POST['submit'])) {
+    try {
+        $radio_value = $_POST["groupOfDefaultRadios"];
+    } catch (Exception $e) {
+
+        $radio_value = '1';
+    }
 }
 
 if (isset($_SESSION["users"])) {
