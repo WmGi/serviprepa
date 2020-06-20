@@ -19,6 +19,9 @@ a:focus {
   outline: none;
   text-decoration: none;
 }
+.customc {
+  padding: 0px;
+}
 
 p {
   padding: 0;
@@ -1578,6 +1581,6 @@ html {
   min-height: 1.5rem;
   padding-left: 5rem;
 }
-.submitb{
+.submitb {
   padding-left: 2rem;
 }

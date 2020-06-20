@@ -27,7 +27,7 @@ session_start();
 
 <body>
 
-    <div class=" container-fluid supreme-container">
+    <div class=" customc container-fluid supreme-container">
 
         <!-- ======= Header ======= -->
         <header id="header">
