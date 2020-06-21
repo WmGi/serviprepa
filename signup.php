@@ -8,7 +8,7 @@ if (strcmp($password, $password1) < 0) {
   header("location:indexs.php?err=3");
 } else {
   $cnx = mysqli_connect("localhost", "root", "root", "surviprepa");
-  $req = mysqli_query($cnx, "insert into users values('{$email}','{$password}','{$name}')"); //string entre cote 
+  $req = mysqli_query($cnx, "insert into users values('{$email}','{$password}','{$name}','','')"); //string entre cote 
 
   header("location:indexs.php?err=4");
 }

@@ -144,7 +144,7 @@ require_once('settings.php');
                                 <ul class="breadcrumb-tree">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Branches</a></li>
-                                    <li class="active"><a href="#">PC</a></li>
+                                    <li class="active"><a href="#">MP</a></li>
 
                                 </ul>
                             </div>
@@ -189,7 +189,7 @@ require_once('settings.php');
                                 <th>download link</th>
                                 <th></th>
                             </tr>
-                            <?php include 'list1.php' ?>
+                            <?php include 'list.php' ?>
 
                     </div>
                 </div>

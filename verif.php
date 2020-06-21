@@ -11,6 +11,7 @@ if ((!empty($_GET["email"])) && (!empty($_GET["password"]))) {
     $cnx = mysqli_connect("localhost", "root", "root", "surviprepa");
     $req = mysqli_query($cnx, "select * from users where email='{$email}' and password='{$password}'");
     $nb = mysqli_num_rows($req);
+    $_SESSION["pic"] = "https://bootdey.com/img/Content/avatar/avatar6.png";
     if ($nb == 0) {
 
         header("location:indexs.php?err=2");

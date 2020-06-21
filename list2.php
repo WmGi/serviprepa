@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
 if (isset($_SESSION["users"])) {
 
     $cnx = mysqli_connect("localhost", "root", "root", "surviprepa");
-    $req = mysqli_query($cnx, "select * from seriepc where br='{$radio_value}'"); //crud read array $d["id] rows $d[0] object $d->id
+    $req = mysqli_query($cnx, "select * from serietc where br='{$radio_value}'"); //crud read array $d["id] rows $d[0] object $d->id
     /*while ($don=mysqli_fetch_array($req)) {
                                                                      echo "<p> {$don["id"]} {$don["titre"]} {$don["prix"]} {$don["qte"]}</p>";
                                                                   }*/
