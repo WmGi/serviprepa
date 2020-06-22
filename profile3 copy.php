@@ -1,7 +1,7 @@
 <?php
+session_start();
 require_once('settings.php');
 
-session_start();
 
 ?>
 <!DOCTYPE html>
@@ -27,43 +27,17 @@ session_start();
 </head>
 
 <body>
-    <div class=" supreme-container">
-        <!-- ======= Hero Section ======= -->
-        <section id="hero">
-            <div class="hero-container">
-                <div class="wow fadeIn">
-                    <div class="hero-logo">
-                        <img class="" src="/images/logo1.png" alt="Prep">
-                    </div>
 
-                    <h1>Welcome to Surviprepa</h1>
+    <div class="customc container-fluid supreme-container">
 
-                    <section class="rw-wrapper">
-                        <h2 class="rw-sentence">
-                            <h2>We create all you need to succed
-                                <span></span>
-                                <div class="rw-words rw-words-1">
-                                    <span>examins</span>
-                                    <span>Series</span>
-                                    <span>Concours</span>
-
-                                </div>
-                            </h2>
-                            <div class="actions">
-                                <a href="#about" class="btn-get-started">Get Strated</a>
-                                <a href="#" class="btn-services">Our Services</a>
-                            </div>
-                </div>
-            </div>
-        </section>
         <!-- ======= Header ======= -->
         <header id="header">
             <div class="container">
 
                 <div id="logo" class="pull-left">
-                    <a href="#hero"><img src="/images/logo1.png" alt=""></a>
+                    <a href="indexs.php"><img src="/images/logo1.png" alt=""></a>
 
-                    <!--<h1><a href="#hero">Header 1</a></h1>-->
+
                 </div>
 
                 <nav id="nav-menu-container">
@@ -110,100 +84,156 @@ session_start();
                         <li><a href="#contact"><a>
 
                                     <i class="fa fa-user-o" data-toggle="modal" data-target="#elegantModalForm"></i>
-                                </a>
-                                <?php
+                                    <?php
 
-                                if (isset($_SESSION["users"])) {
-                                    echo "<a href=\"dec.php\">sign out</a>";
-                                }
-                                ?>
-                            </a>
+                                    if (isset($_SESSION["users"])) {
+                                        echo "<a href=\"dec.php\">sign out</a>";
+                                    }
+                                    ?>
+                                </a></a>
                         </li>
                     </ul>
                 </nav>
                 <!-- #nav-menu-container -->
             </div>
-        </header><!-- End Header -->
-        <section id="about">
-            <div class="container wow fadeInUp">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="section-title">About Us</h3>
-                        <div class="section-title-divider"></div>
-                        <p class="section-description">we are the only site that can give a full website with immense
-                            resourses to make you able to succed in every aspects of your school life </p>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3 left affix ">
+
+                <div class="card">
+
+                    <div class="card-content pt20 pb20 profile-header">
+                        <?php if (isset($_SESSION["users"]))
+                            echo "<img alt=\"\" class=\"img-fluid rounded-circle\" src=" . $_SESSION['pic'] . ">";
+                        else echo '<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="img-fluid rounded-circle">'
+                        ?>
+                        <h4 class="card-title text-center mb20">
+                            <p>Bonjour : <?php
+
+                                            if (isset($_SESSION["users"])) {
+                                                echo $_SESSION["users"];
+                                            } else echo "Monsieur";
+                                            echo ' <p>
+                           
+
+                        </p>'
+                                            ?> </p>
+                        </h4>
+
+
+                        <hr>
+
+
+                        <hr>
+
                     </div>
                 </div>
-            </div>
-            <div class="container about-container wow fadeInUp">
-                <div class="row">
 
-                    <div class="col-lg-6 about-img">
-                        <img src="/images/study.jpg" alt="">
+
+
+            </div>
+            <div class="col-md-9  right">
+                <div id="breadcrumb" class="section">
+                    <!-- container -->
+                    <div class="container">
+                        <!-- row -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="breadcrumb-tree">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Branches</a></li>
+                                    <li class="active"><a href="#">TC</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /row -->
+                    </div>
+                    <!-- /container -->
+                </div>
+                <!-- Group of default radios - option 1 -->
+                <form method="post" action="">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" value="1" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="defaultGroupExample1">Math</label>
                     </div>
 
-                    <div class="col-md-6 about-content">
-                        <h2 class="about-title">We provide great services and ideas</h2>
-                        <p class="about-text">
-                            you dont need from now on to go to libraries and print all kind of documents with your
-                            precious
-                            money that you can use for other things.
-                        </p>
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" value="2" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="defaultGroupExample2">Physique</label>
+                    </div>
 
-                        <p class="about-text">
-                            we will provide you wiht a kind of service that its not avaible int whole country and for
-                            free
-                            it will be your only aid to make a difference and to be honest this platform is meant to
-                            make
-                            everyone equaly prepared from the prespective of person who has passed the prep and all its
-                            hardship.
-                        </p>
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" value="3" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios">
+                        <label class="custom-control-label" for="defaultGroupExample3">STI</label>
+
+                    </div>
+                    <span class=" submitb"><input class="btn1 effect01" type="submit" name="submit" value="submit" /></span>
+                </form>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading"></div>
+                    <div class="panel-body">
+                        <table class="table table-hover  ">
+                            <tr class="">
+                                <th>#</th>
+                                <th>name of file</th>
+                                <th>Date </th>
+                                <th></th>
+                                <th></th>
+
+                                <th>download link</th>
+                                <th></th>
+                            </tr>
+                            <?php include 'list2.php' ?>
+
                     </div>
                 </div>
+
             </div>
-        </section><!-- End About Section -->
-        <!-- ======= Subscrbe Section ======= -->
-        <section id="subscribe">
-            <div class="container wow fadeInUp">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3 class="subscribe-title">Sign up for our daily uploads</h3>
-                        <p class="subscribe-text">Join our 1000+ subscribers and get access to the latest Exams,
-                            and enjoy our free service!</p>
-                    </div>
-                    <div class="col-md-4 subscribe-btn-container">
 
-                        <a class="subscribe-btn" href="mailto:boyofhonor01@gmail.com">contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Subscrbe Section -->
+
+        </div>
 
 
 
 
+    </div>
+    <!-- Accordion card -->
 
-        <script src="/vendor/jquery/jquery.min.js"></script>
-        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
-        <script src="/vendor/php-email-form/validate.js"></script>
-        <script src="/vendor/wow/wow.min.js"></script>
-        <script src="/vendor/jquery-sticky/jquery.sticky.js"></script>
-        <script src="/vendor/superfish/superfish.min.js"></script>
-        <script src="/vendor/hoverIntent/hoverIntent.js"></script>
-        <script src="/vendor/venobox/venobox.min.js"></script>
-        <script src="/vendor/morphext/morphext.min.js"></script>
+    </div>
+    <!-- Accordion wrapper -->
 
-        <!-- Template Main JS File -->
-        <script src="/js/main.js"></script>
 
     </div>
 
-    <!--Modal: Login / Register Form /elegantModalForm-->
+    </div>
 
+    </div>
+
+    <!-- javascript code -->
+
+
+    </div>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="/vendor/php-email-form/validate.js"></script>
+    <script src="/vendor/wow/wow.min.js"></script>
+    <script src="/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="/vendor/superfish/superfish.min.js"></script>
+    <script src="/vendor/hoverIntent/hoverIntent.js"></script>
+    <script src="/vendor/venobox/venobox.min.js"></script>
+    <script src="/vendor/morphext/morphext.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <!--<script src="/js/main.js"></script> -->
     <div class="text-center">
-        <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">
-        </a>
+        <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm"></a>
     </div>
     <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -331,70 +361,6 @@ session_start();
             </div>
         </div>
     </div>
-    <div class="modal fade" id="n4" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title" id="myModalLabel">thank you for signing up</h4>
-                </div>
-                <div class="modal-body">
-                    <p>try to sign in </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="n3" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title" id="myModalLabel">different passwords</h4>
-                </div>
-                <div class="modal-body">
-                    <p>try again </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Footer-->
-    <?php
-    if (isset($_GET["err"])) {
-        $x = $_GET["err"];
-        if ($x == "2") {
-            echo " <script> $('#my').modal('show')</script>";
-        } else if ($x == "1") {
-            echo "mot de passe invalide";
-        } else if ($x == "3") {
-            echo " <script> $('#n3').modal('show')</script>";
-        } else if ($x == "4") {
-            echo " <script> $('#n4').modal('show')</script>";
-        }
-    } ?>
-
-
-
 </body>
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="copyright">
-                    &copy; Copyright <strong>mini project</strong>. All Rights Reserved
-                </div>
-                <div class="credits">
-
-                    Created in 2020
-                </div>
-            </div>
-        </div>
-    </div>
-</footer><!-- End Footer -->
-<script src="wow/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
-
 
 </html>

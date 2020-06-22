@@ -179,7 +179,7 @@ require_once('settings.php');
                     <div class="panel-heading"></div>
                     <div class="panel-body">
                         <table class="table table-hover  ">
-                            <tr class="">
+                            <tr class="mu">
                                 <th>#</th>
                                 <th>name of file</th>
                                 <th>Date </th>
@@ -187,6 +187,8 @@ require_once('settings.php');
                                 <th></th>
 
                                 <th>download link</th>
+                                <th></th>
+                                <th>nb</th>
                                 <th></th>
                             </tr>
                             <?php include 'list2.php' ?>
@@ -202,20 +204,19 @@ require_once('settings.php');
 
 
 
-    </div>
-    <!-- Accordion card -->
-
-    </div>
-    <!-- Accordion wrapper -->
-
 
     </div>
 
     </div>
 
+
     </div>
 
-    <!-- javascript code -->
+    </div>
+
+    </div>
+
+
 
 
     </div>
@@ -361,6 +362,19 @@ require_once('settings.php');
             </div>
         </div>
     </div>
+    <script>
+        $(".pop").on("click", function() {
+
+            nb = $(this).attr("href");
+            $.post("nombre.php", {
+                var_value: nb
+            }, function(data) {
+                alert("data sent and received: " + data);
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>

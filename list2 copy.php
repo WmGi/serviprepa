@@ -27,10 +27,7 @@ if (isset($_SESSION["users"])) {
         echo "<td></td>";
 
         echo "<td>  </td>";
-        echo "<td> <a class=\"pop\"target=\"_blank\" href='{$don["download"]}' download=\"\" ><button class=\"btn  supbtn\">download</button></a></td>";
-        echo "<td>  </td>";
-        echo "<td> {$don["nb"]} </td>";
-
+        echo "<td> <a href='{$don["download"]}' download=\"\" ><button class=\"btn  supbtn\">download</button></a></td>";
         echo "</tr>";
     }
 } else {
