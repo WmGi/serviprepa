@@ -344,6 +344,19 @@ session_start();
             </div>
         </div>
     </div>
+    <div class="modal fade" id="n2" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="myModalLabel">Goodbye </h4>
+                </div>
+                <div class="modal-body">
+                    <p>Come again </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="n3" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -364,7 +377,7 @@ session_start();
         if ($x == "2") {
             echo " <script> $('#my').modal('show')</script>";
         } else if ($x == "1") {
-            echo "mot de passe invalide";
+            echo "<script> $('#n2').modal('show')</script>";
         } else if ($x == "3") {
             echo " <script> $('#n3').modal('show')</script>";
         } else if ($x == "4") {
