@@ -46,6 +46,7 @@ if ((!empty($_GET["email"])) && (!empty($_GET["password"]))) {
                 $d = mysqli_fetch_array($req);
                 $_SESSION["users"] = $d["name"];
                 $_SESSION["pic"] = $d["img"];
+                $_SESSION["id"] = $d["id"];
 
                 header("location:profile.php");
             } else {
@@ -53,6 +54,7 @@ if ((!empty($_GET["email"])) && (!empty($_GET["password"]))) {
                 $d = mysqli_fetch_array($req);
                 $_SESSION["users"] = $d["name"];
                 $_SESSION["pic"] = $d["img"];
+                $_SESSION["id"] = $d["id"];
                 header("location:profile.php");
             }
         } catch (Exception $e) {
