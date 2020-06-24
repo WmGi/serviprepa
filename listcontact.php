@@ -10,7 +10,8 @@ if (isset($_SESSION["users"])) {
 
 
     while ($don = mysqli_fetch_array($req)) {
-        echo "<td> {$don["name"]} </td>";
+        echo "<td> {$don["name"]}   <span class=\"badge1 pull-right\"><button>send</button></span>
+        </td>";
 
 
 

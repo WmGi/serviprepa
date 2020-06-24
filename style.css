@@ -64,6 +64,12 @@ a:focus {
   letter-spacing: 0.13em;
   color: #333;
 }
+.inbox {
+  color: #333333;
+}
+.badge {
+  font-size: larger;
+}
 
 /*highlight*/
 .effect01:after {

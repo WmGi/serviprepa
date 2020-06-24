@@ -10,6 +10,6 @@ if (isset($_SESSION["users"])) {
     }
 
 
-    echo "<p><a href=\"inbox.php\">inbox<a>--.$number
-     $id<p>";
+    echo "<p><a class=\"inbox\" href=\"inbox.php\">INBOX<a><span class=\"badge pull-right\">$number</span>
+     <p>";
 }
