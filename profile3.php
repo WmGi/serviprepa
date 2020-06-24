@@ -368,8 +368,8 @@ require_once('settings.php');
             nb = $(this).attr("href");
             $.post("nombre.php", {
                 var_value: nb
-            }, function(data) {
-                alert("data sent and received: " + data);
+            }, function() {
+                alert("data sent and received: ");
             });
 
         });

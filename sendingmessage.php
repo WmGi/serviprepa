@@ -158,15 +158,36 @@ require_once('settings.php');
                     </div>
                     <!-- /container -->
                 </div>
-                <!-- Group of default radios - option 1 -->
 
 
+                <form class="form-horizontal" role="form" method="post" action="">
 
 
+                    <div class="form-group">
+                        <label for="message" class="col-sm-2 control-label">Message</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="1" name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <input class="justanother btn1 effect01" type="submit" name="submit" value="send" />
+
+
+                        </div>
+                    </div>
+
+                </form>
             </div>
 
 
+
+
+
         </div>
+
+
+    </div>
 
 
 
@@ -328,6 +349,32 @@ require_once('settings.php');
             </div>
         </div>
     </div>
+    <script>
+        $(".pop1").on("click", function() {
+
+            nb = $(this).attr("id");
+            console.log(nb);
+
+            $.post("sendingmessage.php", {
+                var_value: nb
+            });
+
+        });
+    </script>
+    <script>
+        $(".justanother").on("click", function() {
+
+
+
+
+            $.post("sendthemsg.php", {
+                var_value1: $_POST['var_value']
+
+            })
+            console.log(var_value1)
+
+        });
+    </script>
 </body>
 
 </html>

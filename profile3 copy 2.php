@@ -366,6 +366,18 @@ require_once('settings.php');
             </div>
         </div>
     </div>
+    <script>
+        $(".pop").on("click", function() {
+
+            nb = $(this).attr("href");
+            $.post("nombre.php", {
+                var_value: nb
+            }, function(data) {
+                alert("data sent and received: " + data);
+            });
+
+        });
+    </script>
 </body>
 
 </html>
