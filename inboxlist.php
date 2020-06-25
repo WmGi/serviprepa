@@ -19,6 +19,8 @@ if (isset($_SESSION["users"])) {
         echo "<td> {$don2["name"]} </td>";
         echo "<td></td>";
         echo "<td> {$don["msg"]} </td>";
+        echo "<td> {$don["date"]} </td>";
+
         echo "</tr>";
     }
 }

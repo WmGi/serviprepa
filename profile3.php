@@ -181,7 +181,7 @@ require_once('settings.php');
                     <!-- /container -->
                 </div>
                 <!-- Group of default radios - option 1 -->
-                <form method="post" action="">
+                <form class="pad" method="post" action="">
                     <div class="custom-control custom-radio">
                         <input type="radio" value="1" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
                         <label class="custom-control-label" for="defaultGroupExample1">Math</label>

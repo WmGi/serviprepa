@@ -124,14 +124,9 @@ require_once('settings.php');
 
 
                         <hr>
-                        <?php include 'sendmsg.php' ?>
-                        <table class="table table-hover  ">
-                            <tr class="">
-                                <th>liste</th>
-                            </tr>
-                            <?php include 'listcontact.php' ?>
-                            <hr>
-                        </table>
+
+
+                        <hr>
 
                     </div>
                 </div>
@@ -149,39 +144,17 @@ require_once('settings.php');
                                 <ul class="breadcrumb-tree">
                                     <li><a href="#">Home</a></li>
                                     <li><a href="#">Branches</a></li>
-                                    <li class="active"><a href="#">TC</a></li>
+                                    <li class="active"><a href="#">PC</a></li>
 
                                 </ul>
                             </div>
                         </div>
                         <!-- /row -->
                     </div>
-                    <form class="myform" id="myform" class="form-horizontal" role="form" method="post" action="sendthemsg.php">
-                        <div class="  form-group">
-
-                            <div class=" myDiv col-sm-10">
-                                <textarea id="numid" class="form-control" hidden rows="1" name="numid"></textarea>
-                            </div>
-
-                        </div>
-                        <div id="myDiv" class="  form-group">
-                            <label for="message" class="col-sm-2 control-label">Message</label>
-                            <div class=" myDiv col-sm-10">
-                                <textarea id="myDiv" class="form-control" rows="1" name="message"></textarea>
-                            </div>
-
-                        </div>
-                        <span class=" submit"><input class="btn1 effect01" type="submit" name="submit" value="send" /></span>
-
-
-                    </form>
-
-
-
                     <!-- /container -->
                 </div>
                 <!-- Group of default radios - option 1 -->
-                <form class="pad" method="post" action="">
+                <form method="post" action="">
                     <div class="custom-control custom-radio">
                         <input type="radio" value="1" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
                         <label class="custom-control-label" for="defaultGroupExample1">Math</label>
@@ -216,8 +189,8 @@ require_once('settings.php');
                                 <th>download link</th>
                                 <th></th>
                             </tr>
-                            <?php include 'list.php' ?>
-                        </table>
+                            <?php include 'list1.php' ?>
+
                     </div>
                 </div>
 
@@ -388,50 +361,6 @@ require_once('settings.php');
             </div>
         </div>
     </div>
-    <div class="modal fade" id="n5" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title" id="myModalLabel">send message successfuly</h4>
-                </div>
-                <div class="modal-body">
-                    <p>wait for the response </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php
-    if (isset($_GET["err"])) {
-        $x = $_GET["err"];
-        if ($x == "1") {
-            echo " <script> $('#n5').modal('show')</script>";
-        }
-    } ?>
-    <script>
-        $(".pop").on("click", function() {
-
-            nb = $(this).attr("href");
-            $.post("nombre.php", {
-                var_value: nb
-            }, function(data) {
-                alert("data sent and received: " + data);
-            });
-
-        });
-    </script>
-    <script>
-        $(".pop1").on("click", function() {
-
-            n = $(this).attr("id");
-            console.log(n);
-            document.getElementById('numid').innerHTML = n;
-            //document.forms["myform"].submit();
-        });;
-    </script>
-
-
-
 </body>
 
 </html>
