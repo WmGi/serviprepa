@@ -171,22 +171,12 @@ require_once('settings.php');
                             </div>
 
                         </div>
-                        <span class=" submit"><input class="btn1 effect01" type="submit" name="submit" value="submit" /></span>
+                        <span class=" submit"><input class="btn1 effect01" type="submit" name="submit" value="send" /></span>
 
 
                     </form>
-                    <input class="  btn1 effect01" id="more" type="checkbox"> HIDE</input>
 
-                    <script>
-                        window.onload = function() {
-                            document.getElementById('more').onclick = function() {
-                                if (this.checked)
-                                    document.getElementById('myDiv').style.display = 'block';
-                                else
-                                    document.getElementById('myDiv').style.display = 'none';
-                            }
-                        }
-                    </script>
+
 
                     <!-- /container -->
                 </div>
