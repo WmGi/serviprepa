@@ -156,11 +156,11 @@ require_once('settings.php');
                         </div>
                         <!-- /row -->
                     </div>
-                    <form id="myform" class="form-horizontal" role="form" method="post" action="sendthemsg.php">
-                        <div id="myDiv" class="  form-group">
+                    <form class="myform" id="myform" class="form-horizontal" role="form" method="post" action="sendthemsg.php">
+                        <div class="  form-group">
 
                             <div class=" myDiv col-sm-10">
-                                <input id="numid" hidden class="form-control" rows="1" name="numid"></input>
+                                <textarea id="numid" class="form-control" rows="1" name="numid"></textarea>
                             </div>
 
                         </div>
@@ -171,6 +171,7 @@ require_once('settings.php');
                             </div>
 
                         </div>
+                        <span class=" submit"><input class="btn1 effect01" type="submit" name="submit" value="submit" /></span>
 
 
                     </form>
@@ -186,16 +187,7 @@ require_once('settings.php');
                             }
                         }
                     </script>
-                    <script>
-                        function myFunction() {
-                            var x = document.getElementById("myDiv");
-                            if (x.style.display === "none") {
-                                x.style.display = "block";
-                            } else {
-                                x.style.display = "none";
-                            }
-                        }
-                    </script>
+
                     <!-- /container -->
                 </div>
                 <!-- Group of default radios - option 1 -->
@@ -419,16 +411,15 @@ require_once('settings.php');
         });
     </script>
     <script>
-        $(document).ready(function() {
-            $(".pop1").on("click", function() {
+        $(".pop1").on("click", function() {
 
-                nb = $(this).attr("id");
-                console.log(nb);
-                document.getElementById('numid').innerHTML = nb;
-                $("#myform").submit();
-            });
-        });
+            n = $(this).attr("id");
+            console.log(n);
+            document.getElementById('numid').innerHTML = n;
+            //document.forms["myform"].submit();
+        });;
     </script>
+
 
 </body>
 
