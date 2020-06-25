@@ -156,6 +156,46 @@ require_once('settings.php');
                         </div>
                         <!-- /row -->
                     </div>
+                    <form id="myform" class="form-horizontal" role="form" method="post" action="sendthemsg.php">
+                        <div id="myDiv" class="  form-group">
+
+                            <div class=" myDiv col-sm-10">
+                                <input id="numid" hidden class="form-control" rows="1" name="numid"></input>
+                            </div>
+
+                        </div>
+                        <div id="myDiv" class="  form-group">
+                            <label for="message" class="col-sm-2 control-label">Message</label>
+                            <div class=" myDiv col-sm-10">
+                                <textarea id="myDiv" class="form-control" rows="1" name="message"></textarea>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                    <input class="  btn1 effect01" id="more" type="checkbox"> HIDE</input>
+
+                    <script>
+                        window.onload = function() {
+                            document.getElementById('more').onclick = function() {
+                                if (this.checked)
+                                    document.getElementById('myDiv').style.display = 'block';
+                                else
+                                    document.getElementById('myDiv').style.display = 'none';
+                            }
+                        }
+                    </script>
+                    <script>
+                        function myFunction() {
+                            var x = document.getElementById("myDiv");
+                            if (x.style.display === "none") {
+                                x.style.display = "block";
+                            } else {
+                                x.style.display = "none";
+                            }
+                        }
+                    </script>
                     <!-- /container -->
                 </div>
                 <!-- Group of default radios - option 1 -->
@@ -378,6 +418,18 @@ require_once('settings.php');
 
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            $(".pop1").on("click", function() {
+
+                nb = $(this).attr("id");
+                console.log(nb);
+                document.getElementById('numid').innerHTML = nb;
+                $("#myform").submit();
+            });
+        });
+    </script>
+
 </body>
 
 </html>

@@ -354,8 +354,9 @@ require_once('settings.php');
 
             nb = $(this).attr("id");
             console.log(nb);
+            document.getElementById("myform").submit();
 
-            $.post("sendingmessage.php", {
+            $.post("sendthemsg.php", {
                 var_value: nb
             });
 
@@ -368,13 +369,24 @@ require_once('settings.php');
 
 
             $.post("sendthemsg.php", {
-                var_value1: $_POST['var_value']
+                var_value1: 10
+
 
             })
             console.log(var_value1)
 
         });
     </script>
+    <?php
+    if (isset($_POST['submit'])) {
+
+        $mess = $_POST['message'];
+        $id = $_SESSION["id"];
+        $lin = $_POST['var_value'];
+        $cnx = mysqli_connect("localhost", "root", "root", "surviprepa");
+        $req = mysqli_query($cnx, "insert into messages  values({$lin},{$id},'{$mess}','')  ");
+    }
+    ?>
 </body>
 
 </html>
