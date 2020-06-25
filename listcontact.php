@@ -12,7 +12,7 @@ if (isset($_SESSION["users"])) {
     while ($don = mysqli_fetch_array($req)) {
         $id = $don["id"];
 
-        echo "<td> {$don["name"]}   <span class=\"badge1 pull-right\"><button class=\"pop1\" id=\"$id\" >send</button></span>
+        echo "<td> {$don["name"]}   <span class=\"badge1 pull-right\"><button class=\"pop1 customb\" id=\"$id\" ><i class=\"fa fa-paper-plane\" aria-hidden=\"true\"></i></button></span>
         </td>";
 
 
