@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_SESSION["users"])) {
     $id = $_SESSION["id"];
 

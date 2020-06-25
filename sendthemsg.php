@@ -9,7 +9,9 @@ if (isset($_POST['submit'])) {
 
 
     $cnx = mysqli_connect("localhost", "root", "root", "surviprepa");
-    $req = mysqli_query($cnx, "insert into messages  values({$lin},{$id},'{$mess}','')");
+    $req = mysqli_query($cnx, "insert into messages  values({$id},{$lin},'{$mess}','')");
+
+    header("location:profile3copy2.php?err=1");
 } else {
     echo "ooooo";
 }
